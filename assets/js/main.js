@@ -1,20 +1,6 @@
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 (function($) {
-
-    // skel.breakpoints({
-    // 	wide: '(max-width: 1920px)',
-    // 	normal: '(max-width: 1680px)',
-    // 	narrow: '(max-width: 1280px)',
-    // 	narrower: '(max-width: 1000px)',
-    // 	mobile: '(max-width: 736px)',
-    // 	mobilenarrow: '(max-width: 480px)',
-    // });
-
     $(function() {
 
         var $window = $(window),
@@ -24,14 +10,13 @@
             $animation_elements = $('.animation-element');
         $nav = $('#nav');
 
-        $window.on('beforeunload', function() {
-            $window.scrollTop(0);
-        });
 
         var $robynGif = $('#robyn-gif');
 
         // Wait for window load
         $window.on('load', function() {
+               $('html').animate({scrollTop:0}, 1);
+    $('body').animate({scrollTop:0}, 1);
             // Animate loader off screen
             $(".preloader").fadeOut("fast");
             $('#header').css('display', 'block');
@@ -39,6 +24,7 @@
                 typeWriter($('#intro-line-1'), 30);
                 setTimeout(function() { typeWriter($('#intro-line-2'), 50) }, 740)
             }
+
         });
 
         // smooth scroll to anchor
@@ -149,10 +135,6 @@
             })(0);
 
         };
-
-        // if ($('#intro-line-1').html().trim().slice(-1) != ">") {
-        //     typeWriter($('#intro-line-1'));
-        // }
 
 
         var iScrollPos = 0;

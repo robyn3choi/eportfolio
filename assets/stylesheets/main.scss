@@ -575,6 +575,7 @@ img#one-bird {
 }
 
 // development section
+// commented out heights are for 6 portfolio items, rather than 9
 #section-development {
     h1 {
         position: relative;
@@ -582,55 +583,70 @@ img#one-bird {
     }
     position: relative;
     z-index: 3;
-    height: 960px;
+    //height: 960px;
+    height: 1250px;
     max-width: 2400px;
     margin: auto;
     background-image: linear-gradient(#375d8b 69%,
     #ff412e 85%,
     #ff9a83);
     @media (max-width: 1240px) {
-        height: 910px;
+        //height: 910px;
+        height: 1200px;
     }
     @media (max-width: 1100px) {
-        height: 870px;
+        //height: 870px;
+        height: 1100px;
     }
     @media (max-width: 1000px) {
-        height: 810px;
+        //height: 810px;
+        height: 1040px;
     }
     @media (max-width: 900px) {
-        height: 770px;
+        //height: 770px;
+        height: 980px;
     }
     @media (max-width: 800px) {
-        height: 1180px;
+        //height: 1180px;
+        height: 1720px;
         background-image: linear-gradient(#375d8b 73%, #ff412e 92%, #ff9a83);
     }
     @media (max-width: 740px) {
-        height: 1130px;
+        //height: 1130px;
+        height: 1630px;
     }
     @media (max-width: 700px) {
-        height: 1080px;
+        //height: 1080px;
+        height: 1580px;
     }
     @media (max-width: 640px) {
-        height: 2100px;
+        //height: 2100px;
+        height: 2990px;
         background-image: linear-gradient(#375d8b 87%, #ff412e 97%, #ff9a83);
     }
     @media (max-width: 420px) {
-        height: 2020px;
+        //height: 2020px;
+        height: 2890px;
     }
     @media (max-width: 400px) {
-        height: 1950px;
+        //height: 1950px;
+        height: 2760px;
     }
     @media (max-width: 380px) {
-        height: 1900px;
+        //height: 1900px;
+        height: 2650px;
     }
     @media (max-width: 360px) {
-        height: 1800px;
+        //height: 1800px;
+        height: 2550px;
     }
     @media (max-width: 340px) {
-        height: 1720px;
+        //height: 1720px;
+        height: 2430px;
     }
     @media (max-width: 320px) {
-        height: 1660px;
+        //height: 1660px;
+        height: 2330px;
     }
 }
 
@@ -797,13 +813,17 @@ a.expand {
 h3.expand {
     position: absolute;
     bottom: 28px;
-    left: 20px;
+    padding: 0 20px;
     font-size: 15px;
     color: #fff;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.5em;
+
+    &.long-description {
+        bottom: 44px;
+    }
 }
 
 h4 {
@@ -1003,6 +1023,7 @@ img#cityscape {
 
 #chart-vertical {
     width: 80%;
+    max-width: 1100px;
     height: 500px;
     margin: 30px auto 0;
     display: block;
@@ -1451,6 +1472,9 @@ img#robyn-goodbye {
         float: left;
         margin: auto;
         margin-bottom: 8px;
+    }
+    .fa:hover {
+        opacity: 0.8;
     }
 }
 
