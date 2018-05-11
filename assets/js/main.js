@@ -15,9 +15,9 @@
 
         // Wait for window load
         $window.on('load', function() {
-               $('html').animate({scrollTop:0}, 1);
-    $('body').animate({scrollTop:0}, 1);
-            // Animate loader off screen
+            $('html').animate({scrollTop:0}, 1);
+            $('body').animate({scrollTop:0}, 1);
+        // Animate loader off screen
             $(".preloader").fadeOut("fast");
             $('#header').css('display', 'block');
             if ($('#intro-line-2').html().trim().slice(-1) != ">") {
@@ -25,6 +25,15 @@
                 setTimeout(function() { typeWriter($('#intro-line-2'), 50) }, 740)
             }
 
+            // hack to position pseudo elements in speech bubbles correctly in firefox
+            if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+                $('#intro::before').css('top', '186px');
+                $('#intro::after').css('top', '184px');
+
+                $( "<style>#intro::before { top: 186px; } #intro::after { top: 184px; } </style>" ).appendTo( "head" );
+                $( "<style>#about-speech-1::before { top: 196px; } #about-speech-1::after { top: 193px; } </style>" ).appendTo( "head" );
+                $( "<style>#about-speech-2::before { top: 196px; } #about-speech-2::after { top: 193px; } </style>" ).appendTo( "head" );
+            }
         });
 
         // smooth scroll to anchor
